@@ -2,10 +2,17 @@ package main
 
 import "fmt"
 
+type bill struct {
+	name   string
+	amount int
+}
+
 func main() {
 
-	my_i := 5
-	my_i = 99
-	fmt.Println(my_i)
-	my_i = 200
+	bill1 := bill{
+		name:   "chris",
+		amount: 99,
+	}
+	fmt.Println(bill1.name)
+
 }
