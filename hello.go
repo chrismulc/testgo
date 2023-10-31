@@ -49,7 +49,7 @@ func main() {
 	bill1.setName(text)
 
 	// bill1.setName("test")
-	setNameOutside(&bill1, "shit again")
+	// setNameOutside(&bill1, "shit again")
 
 	fmt.Println(bill1.getName())
 	bill1.setAmount(i)
