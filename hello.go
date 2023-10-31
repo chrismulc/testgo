@@ -43,19 +43,26 @@ func main() {
 		amount: 999,
 	}
 
+	bill2 := bill{
+		name:   "danni",
+		amount: 100,
+	}
+
 	reader := bufio.NewReader(os.Stdin)
 	text, _ := reader.ReadString('\n')
 
 	bill1.setName(text)
 
 	// bill1.setName("test")
-	// setNameOutside(&bill1, "shit again")
+	setNameOutside(&bill1, "shit again")
 
 	fmt.Println(bill1.getName())
 	bill1.setAmount(i)
 	bill1.setAmount(77)
 
 	bills = append(bills, bill1)
-	test := bills[0]
-	fmt.Println("amount: ", test.getAmount())
+	bills = append(bills, bill2)
+
+	test := bills[1]
+	fmt.Println("amount: ", test.getName())
 }
