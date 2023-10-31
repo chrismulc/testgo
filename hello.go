@@ -6,6 +6,8 @@ import (
 	"os"
 )
 
+// silly
+
 type bill struct {
 	name   string
 	amount int
