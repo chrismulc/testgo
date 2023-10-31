@@ -6,12 +6,12 @@ import (
 	"os"
 )
 
-// silly
-
 type bill struct {
 	name   string
 	amount int
 }
+
+// test
 
 func (b *bill) setName(the_name string) {
 	b.name = the_name
@@ -40,7 +40,7 @@ func main() {
 
 	bill1 := bill{
 		name:   "chris",
-		amount: 99,
+		amount: 999,
 	}
 
 	reader := bufio.NewReader(os.Stdin)
