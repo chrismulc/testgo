@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
 
 type bill struct {
 	name   string
@@ -28,6 +32,8 @@ func setNameOutside(b *bill, the_name string) {
 
 func main() {
 
+	var bills []bill
+
 	i := 99
 
 	bill1 := bill{
@@ -35,10 +41,19 @@ func main() {
 		amount: 99,
 	}
 
-	bill1.setName("test")
-	setNameOutside(&bill1, "shit again")
+	reader := bufio.NewReader(os.Stdin)
+	text, _ := reader.ReadString('\n')
+
+	bill1.setName(text)
+
+	// bill1.setName("test")
+	// setNameOutside(&bill1, "shit again")
+
 	fmt.Println(bill1.getName())
 	bill1.setAmount(i)
 	bill1.setAmount(77)
-	fmt.Println("amount: ", bill1.getAmount())
+
+	bills = append(bills, bill1)
+	test := bills[0]
+	fmt.Println("amount: ", test.getAmount())
 }
