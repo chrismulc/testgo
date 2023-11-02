@@ -128,4 +128,5 @@ func main() {
 
 	billtest, _ := readJsonFile("bill.json")
 	fmt.Printf("Bill: %+v\n", billtest)
+
 }
