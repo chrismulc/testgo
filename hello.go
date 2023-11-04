@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"src/mypackage"
 )
 
 type Bill struct {
@@ -126,7 +127,11 @@ func main() {
 		}
 	*/
 
+	var my_test mypackage.Faker
+	my_test.Name = "Faker"
+	
+
 	billtest, _ := readJsonFile("bill.json")
-	fmt.Printf("Bill: %+v\n", billtest)
+	fmt.Printf("Bill : %+v\n", billtest)
 
 }
