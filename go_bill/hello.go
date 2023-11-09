@@ -86,6 +86,7 @@ func main() {
 	// this is in test
 	var my_test mypackage.Faker
 	my_test.Name = "Chris"
+  my_test.Amount = 888
 	// only in test
 	// also only in test
 
